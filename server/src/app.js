@@ -49,10 +49,6 @@ app.use(
   }),
 );
 
-app.get("/healthz", (req, res) => {
-  res.json({ ok: true });
-});
-
 app.use("/api", routes);
 
 app.use(errorHandler);

@@ -4,12 +4,6 @@ const { runDailySnapshotJob } = require("./jobs/dailySnapshot.job");
 
 const PORT = Number(process.env.PORT || 5001);
 
-function parseBoolean(value, fallback = true) {
-  if (value === undefined || value === null || value === "") return fallback;
-  const normalized = String(value).trim().toLowerCase();
-  return !["0", "false", "no", "off"].includes(normalized);
-}
-
 function parsePositiveInt(value, fallback) {
   const parsed = Number(value);
   if (!Number.isFinite(parsed) || parsed <= 0) return fallback;
@@ -17,11 +11,6 @@ function parsePositiveInt(value, fallback) {
 }
 
 function scheduleSnapshotJob() {
-  if (!parseBoolean(process.env.SNAPSHOT_SCHEDULER_ENABLED, true)) {
-    console.log("[info] Snapshot scheduler is disabled by SNAPSHOT_SCHEDULER_ENABLED");
-    return;
-  }
-
   const intervalMinutes = parsePositiveInt(process.env.INGEST_INTERVAL_MINUTES, 180);
   const intervalMs = intervalMinutes * 60 * 1000;
 

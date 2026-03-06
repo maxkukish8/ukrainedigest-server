@@ -25,7 +25,6 @@ Optional (defaults are in code/config):
 - `INGEST_PAGE_SIZE` (`10`)
 - `INGEST_INTERVAL_MINUTES` (`180`)
 - `NEWS_API_DAILY_BUDGET` (`90`)
-- `SNAPSHOT_SCHEDULER_ENABLED` (`false` on Netlify, because scheduler is external)
 
 ## Deploy steps
 
