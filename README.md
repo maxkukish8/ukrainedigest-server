@@ -5,6 +5,14 @@ Ukraine Digest is an MVP that shows how different countries cover news about Ukr
 - MVP prototype was created with Lovable: https://ukrainedigest.lovable.app/
 - Production deployment: https://ukrainedigest.netlify.app/
 
+## Screenshots
+
+**Homepage**
+![Homepage](docs/screenshots/homepage.png)
+
+**Country View**
+![Country View](docs/screenshots/country-view.png)
+
 ## What this project does
 
 - Aggregates real articles about Ukraine from 12 countries.
@@ -177,4 +185,3 @@ curl -X POST "https://<your-site>.netlify.app/.netlify/functions/ingest-backgrou
   - NewsAPI quota/limits
   - DB connection variables
 - `seed` uses example data and is mostly for local bootstrap/testing.
-
